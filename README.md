@@ -1,0 +1,109 @@
+# Liveticker (by stklcode)
+
+* Contributors:      Stefan Kalscheuer
+* Tags:              liveticker, feed, rss
+* Requires at least: 4.7
+* Tested up to:      6.4
+* Requires PHP:      5.6
+* Stable tag:        1.2.2
+* License:           GPLv2 or later
+* License URI:       http://www.gnu.org/licenses/gpl-2.0.html
+
+A simple ajaxified liveticker plugin for WordPress.
+
+## Description
+
+Liveticker is a simple liveticker plugin for WordPress.
+Easily add multiple livetickers, add them to posts with shortcode or use them as Widget.
+
+### Features
+
+* Handle multiple Tickers
+* Automatic update via AJAX
+* RSS feed capability
+* Gutenberg block and shortcode to display liveticker
+* Add ticker to sidebar widgets
+* Ability to customize through CSS
+* Localization support
+
+
+## Installation
+
+If you don’t know how to install a plugin for WordPress, [here’s how](https://wordpress.org/support/article/managing-plugins/).
+
+You can obtain the plugin through fhe official WordPress plugin repository.
+Alternatively you can also use _Copmposer_.
+
+### Requirements ###
+
+* PHP 5.6 or above
+* WordPress 4.7 or above
+
+## Frequently asked questions
+
+### How do I display a liveticker on my post/page?
+
+On WordPress 5 sites there is a Gutenberg Block available to embed a liveticker in your post.
+
+You can also use the shortcode  `[liveticker ticker="my-ticker"]` on WordPress 4 or classic-mode sites. 
+If you want to define a custom tick limit, you might also add a limit with `[liveticker ticker="my-ticker" limit="10"]`.
+
+### Can I use my own styles?
+
+Of course.
+You can deactivate the default stylesheet on the settings page and include your own instead.
+
+### Does the liveticker work with caching?
+
+If you activate AJAX updates (enabled by default), the JavaScript will automatically update the content, even when the 
+page is loaded from cached.
+
+If AJAX is disabled, it depends on your update and caching intervals. If you update your ticker every 5 minutes, a 
+caching time of 12 hours obviously makes no sense.
+
+
+## Screenshots
+
+1. Example liveticker (frontend)
+2. Tick management
+3. Ticker configuration.
+4. Settings page
+5. Gutenberg block
+6. Example shortcode
+7. Example widget
+
+## Changelog
+
+### 1.2.2 - 2023-03-02
+
+* Update use of deprecated WP core functions
+* Extend output sanitization
+* Tested with WP 6.4
+
+### 1.2.1 - 2022-02-01
+
+* Fix issue with limit in Gutenberg block.
+
+### 1.2.0 - 2022-01-23
+
+* Requires WordPress 4.7 or above
+* Migrated AJAX to REST API
+* Resolved Javascript compatibility issues with IE11
+* Added optional shortcode support for tick content
+* Support embedded JavaScript execution in tick content (e.g. for social media integrations)
+
+### 1.1.1 - 2021-03-20
+
+* "Ticker"  taxonomy name is now translatable
+
+### 1.1.0 - 2020-05-02
+
+* Requires PHP 5.6 or above
+* Use GMT for automatic updates 
+* Gutenberg Block available
+* Ticks exposed through REST API
+* Changed AJAX update logic for embedded media compatibility
+
+### 1.0.0 - 2018-11-02
+
+* Initial release
